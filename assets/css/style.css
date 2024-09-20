@@ -102,7 +102,7 @@
     margin-bottom: 0.5rem;
 }
 
-.titulo__info__botao a{
+.titulo__info__botao{
     background-color: var(--green-btn);
     border: 1px solid var(--green-btn);
     border-radius: 40px;
@@ -110,5 +110,6 @@
     padding: 1.2rem 2.5rem;
     font-size: 1.2rem;
     font-weight: 700;
+    text-align: center;
 }
 
