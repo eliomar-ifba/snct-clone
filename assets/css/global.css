@@ -8,7 +8,6 @@
   --gray-background: #F0F2F2;
   --white: #ffffff;
 
-
   --font-Roboto: "Roboto", sans-serif;
   --font-Opensans: "Open Sans", sans-serif;
 }
@@ -20,5 +19,7 @@ html{
 }
 
 body{
-  background: var(--gray-background);
+  background: var(--green-btn);
+  display: flex;
+  justify-content: center;
 }

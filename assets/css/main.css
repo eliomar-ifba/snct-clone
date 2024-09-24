@@ -1,5 +1,9 @@
-.main-container {
-  height: 100vh;
+.container {
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1100px;
 }
 
 .imagem-fundo {
@@ -17,118 +21,101 @@
   background-size: contain;
 }
 
-.header-container,
-.banner-container,
-.titulo-container,
-.descricao-container,
-.convidados-container {
+/* CABEÇALHO  */
+.header {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.header-area {
-  width: 1100px;
-  height: 70px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: blue;
+  padding: 0 1rem;
 }
 
 .header__logo {
-  height: 28px;
+  height: 25px;
 }
 
-.header__botao {
-  color: aliceblue;
-}
-
-.header__botao a {
+.header__linkBotao {
   color: var(--white);
   font-family: var(--font-Opensans);
   font-size: 1rem;
   font-weight: 600;
   border: 1.6px solid var(--white);
-  border-radius: 30px;
+  border-radius: 40px;
   padding: 1rem 2rem;
 }
 
-.banner__image {
-  /* max-width: fit-content; */
+/* CAPA BANNER */
+.banner {
   border-radius: 8px;
 }
 
-.titulo-container,
-.descricao-container,
-.convidados-container {
-  margin: 25px 0 16px 0;
-}
-
-.titulo-area,
-.descricao-area,
-.convidados-area {
-  width: 1100px;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  background-color: var(--white);
+/* DADOS DO EVENTO */
+.dadosEvento {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
   padding: 3rem 4.5rem;
+  gap: 1rem;
+  border: 1px solid #d5d9d9;
+  background-color: var(--white);
 }
 
-.titulo-area__dados-evento {
+.dadosEvento__tituloDataLocal {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  background-color: aqua;
 }
 
-.titulo-area__nome-evento {
+.dadosEvento__titulo {
   font-size: 2.5rem;
   color: var(--black-font);
-  margin-bottom: 1rem;
-}
-
-.titulo-area__data-local-evento {
-  font-family: var(--font-Roboto);
-  font-weight: 400;
-  font-size: 1.4rem;
-  color: var(--gray);
-}
-
-.data-evento--margin {
   margin-bottom: 0.5rem;
 }
 
-.titulo-area__botao {
+.dadosEvento__data,
+.dadosEvento__local {
+  font-family: var(--font-Roboto);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.dadosEvento__linkBotao {
   background-color: var(--green-btn);
   border: 1px solid var(--green-btn);
-  border-radius: 40px;
   color: var(--white);
+  border-radius: 40px;
   padding: 1.2rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
 }
 
-.descricao-area {
+/* SOBRE EVENTO */
+.sobreEvento {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  border-radius: 8px;
   padding: 7rem 15rem;
-  gap: 1.5rem;
+  gap: 1rem;
+  border: 1px solid #d5d9d9;
+  background-color: var(--white);
 }
 
-.descricao-area__titulo,
-.convidados-area__titulo {
+.sobreEvento__titulo,
+.convidados__titulo {
   font-family: var(--font-Opensans);
   font-size: 2.5rem;
-  text-align: center;
   color: var(--black-font);
-
+  text-align: center;
 }
 
-.descricao-area p {
+.sobreEvento p {
   font-family: var(--font-Opensans);
   font-size: 1.45rem;
   color: var(--black-font);
@@ -136,44 +123,47 @@
   line-height: 2.2rem;
 }
 
-.descricao-area__p--mark-azul {
+.sobreEvento__p--mark-azul {
   background: transparent;
   color: #085294;
   font-weight: bold;
 }
 
-.descricao-area__p--mark-verde {
+.sobreEvento__p--mark-verde {
   background: transparent;
   color: #295218;
   font-weight: bold;
 }
 
-.convidados-area {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 7rem 15rem;
-  gap: 5rem;
-}
-
-.convidados-area__cards {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 2rem;
-}
-
-.convidados-area__card {
+/* CONVIDADOS */
+.convidados {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  flex: 1 1 calc(20%);
+  border-radius: 8px;
+  padding: 7rem 15rem;
+  gap: 4rem;
+  border: 1px solid #d5d9d9;
+  background-color: var(--white);
 }
 
-.convidados-area__card img {
+.convidados__cards-grid {
+  background-color: aquamarine;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.convidados__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.convidados__card img {
+  background-color: #295218;
   width: 100px;
   height: auto;
   border-radius: 50px;
@@ -181,12 +171,11 @@
   transition: 0.3s ease;
 }
 
-.convidados-area__card img:hover {
-  /* transform: scale(1.1); */
-  transform: translateY(-5px);
+.convidados__card img:hover {
+  transform: scale(1.1);
 }
 
-.convidados-area h2 {
+.convidados__card h2 {
   font-family: var(--font-Roboto);
   color: #666666;
   text-align: center;
@@ -194,17 +183,31 @@
   font-weight: 500;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 10px 0 35px;
+}
+
+footer a,
+footer p {
+  font-size: 12px;
+  color: white;
+}
+
 @media (max-width: 768px) {
-    .descricao-area,
-    .convidados-area {
-        padding: 3rem 5rem;
-    }
-    .titulo-area{
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .titulo-area__nome-evento,
-    .titulo-area__data-local-evento{
-        text-align: center;
-    }
+  .sobreEvento,
+  .convidados {
+    padding: 3rem 5rem;
+  }
+  .dadosEvento {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .dadosEvento__titulo,
+  .dadosEvento__data,
+  .dadosEvento__local {
+    text-align: center;
+  }
 }
